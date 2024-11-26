@@ -19,14 +19,22 @@
         </h4>
     </div>
 
-    <img src="<?=base_url('content/icons/leaf-separator.png')?>" alt="" width="50px" height="50px">
-    
-<div class="aside-right" style="float:right;">
-    <h4 class="text-center">
-        <img src="<?=base_url('content/icons/attach-removebg-preview.png'); ?>" width="120px" height="120px" style="rotate: 35deg;">Every file in one<br>
+<div class="separator" style="padding: 2rem;">
+    <div class="vr" style="height: 8rem"></div>
+    <div class="img-separator">
+        <img src="<?=base_url('content/icons/leaf-separator.png')?>" width="25px" height="25px">
+    </div>
+    <div class="vr" style="height:8rem"></div>
+    </div>
 
-        Possibility of importing files as PDFs, <br>images, audio and documents.
-    </h4>
-</div>
 
+    <div class="aside-right" style="float:right;">
+        <h4 class="text-center">
+            <img src="<?=base_url('content/icons/attach-removebg-preview.png'); ?>" width="120px" height="120px" style="rotate: 35deg;">Every file in one<br>
+
+            Possibility of importing files as PDFs, <br>images, audio and documents.
+        </h4>
+    </div>
+
+    </div>
 </div>
