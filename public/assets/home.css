@@ -1,24 +1,17 @@
-.holder-image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    background-image: url("../content/AdobeStock_418121757.jpeg");
+.holder-image {
+  background-image: url("../content/AdobeStock_418121757.jpeg");
+  height: 80vh;
 }
 
-.box {
-    h1 {
-        background-image: url("../content/AdobeStock_439024603.jpeg");
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        font-size: 8vw;
-    }
+.box h1 {
+  background-image: url("../content/AdobeStock_439024603.jpeg");
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 8vw;
+}
+.box h4 {
+  text-shadow: #000 1px 0px 8px;
+  cursor: pointer;
 }
 
-.content-about{
-     display:flex;
-     justify-content: center;
-     padding-top: 2rem;
-     margin: 8rem;
-     height: 70vh;
- }
+/*# sourceMappingURL=home.css.map */
