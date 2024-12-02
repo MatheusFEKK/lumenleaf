@@ -2,7 +2,9 @@
     <div class="box">
         <h1>L U M E N L E A F</h1>
         <br><br><br>
-        <h4 class="text-center pt-5">Already have an account? Log in</h4>
+        <a style="text-decoration: none; color:black;" href="<?=base_url('login')?>">
+            <h4 class="text-center pt-5">Already have an account? Log in</h4>
+        </a>
     </div>
 </div>
 

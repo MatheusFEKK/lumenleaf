@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 $backGroundPaper: url("../content/AdobeStock_418121757.jpeg");
 $backGroundLeafs: url("../content/AdobeStock_439024603.jpeg");
+$whiteColor: #FFF;
+$blackColor: #000;
+$darkGreenColor: #435C41;
+$fontFamillyInter: "Inter", serif;
+$fontFamillyInterWeight: 700;
+
 
 .holder-image{
     background-image: $backGroundPaper;
-    height: 80vh;
+    height: 85vh;
 }
 
 .box {
@@ -12,10 +20,30 @@ $backGroundLeafs: url("../content/AdobeStock_439024603.jpeg");
         -webkit-text-fill-color: transparent;
         background-clip: text;
         font-size: 8vw;
+        font-family: $fontFamillyInter;
+        font-weight: $fontFamillyInterWeight;
     }
 
     & h4{
-        text-shadow: #000 1px 0px 8px;
-        cursor: pointer;
+        cursor: pointer
     }
+}
+
+.button-login {
+    background-color: $whiteColor;
+    border: 1px $blackColor solid;
+}
+
+.input-user{
+    background-color: $darkGreenColor;
+    color: $whiteColor;
+}
+
+form ::placeholder{
+    color: $whiteColor;
+}
+
+.button-user {
+    background-color: $darkGreenColor;
+    color: $whiteColor;
 }

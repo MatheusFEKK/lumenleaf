@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .holder-image {
   background-image: url("../content/AdobeStock_418121757.jpeg");
-  height: 80vh;
+  height: 85vh;
 }
 
 .box h1 {
@@ -8,10 +9,30 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: 8vw;
+  font-family: "Inter", serif;
+  font-weight: 700;
 }
 .box h4 {
-  text-shadow: #000 1px 0px 8px;
   cursor: pointer;
+}
+
+.button-login {
+  background-color: #FFF;
+  border: 1px #000 solid;
+}
+
+.input-user {
+  background-color: #435C41;
+  color: #FFF;
+}
+
+form ::placeholder {
+  color: #FFF;
+}
+
+.button-user {
+  background-color: #435C41;
+  color: #FFF;
 }
 
 /*# sourceMappingURL=home.css.map */
