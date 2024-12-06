@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .holder-image {
-  background-image: url("../content/AdobeStock_418121757.jpeg");
+  background-image: url("../content/AdobePaper.jpeg");
   height: 85vh;
 }
 
 .box h1 {
-  background-image: url("../content/AdobeStock_439024603.jpeg");
+  background-image: url("../content/AdobeLeaf.png");
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: 8vw;
