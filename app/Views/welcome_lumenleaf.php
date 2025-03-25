@@ -1,6 +1,6 @@
             <div class="holder-image d-flex justify-content-center align-items-center">
                 <div class="box shadow">
-                    <h1>L U M E N L E A F</h1>
+                        <h1>L U M E N L E A F</h1>
                     <br><br><br>
                     <div class="information-lumenleaf pt-5 p-5">
                         <h4 class="text-center text-light">LumenLeaf has been created with the objective of us is <br> make you more agile in taking notes.</h4>

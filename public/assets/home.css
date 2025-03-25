@@ -36,8 +36,8 @@
 }
 
 .box {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 8rem;
   border-radius: 2rem;
 }
@@ -70,9 +70,11 @@
 .content-about {
   background-image: url("../content/background-fino.png");
   background-size: contain;
+  background-repeat: round;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 2rem;
+  transition: height 0.8s linear;
 }
 
 /*# sourceMappingURL=home.css.map */
