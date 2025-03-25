@@ -10,11 +10,18 @@
 <body>
 
 <!-- As a heading -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary d-flex p-4">
-  <div class="container-fluid d-flex justify-content-center">
-      <a class="navbar-brand" href="#"><img src="<?=base_url('content/icons/lumenleaf2.png');?>"></a>
-    </div>
-    <a href="<?=base_url('login')?>">
-        <button class="btn button-login shadow"><?=esc($info)?></button>
-    </a>
-</nav>
+<div class="container-holder min-vh-100">
+     <header class="headling rounded-bottom">
+        <nav class="navbar navbar-expand-lg bg-transparent p-0">
+           <div class="container-fluid d-flex"  style="backdrop-filter: blur(10px)">
+               <a class="navbar-brand text-light" href="<?=base_url('/')?>">
+                    <?=esc($navbrand)?>
+                </a>
+                <a class="btn button-nav shadow" href="<?=base_url('login')?>">
+                    <?=esc($info)?>
+                </a>
+        </nav>
+</header>
+        
+
+    

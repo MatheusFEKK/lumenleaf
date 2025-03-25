@@ -1,38 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-.holder-image {
-  background-image: url("../content/AdobePaper.jpeg");
-  height: 85vh;
+@media (max-width: 950px) {
+  .box {
+    width: 60% !important;
+  }
+  .box .form-container {
+    width: 100% !important;
+  }
+}
+.container-holder {
+  background-image: url("../content/AdobeLeaf.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+.holder-image {
+  padding: 5rem;
+}
+
+.navbar .navbar-brand {
+  margin: 0px;
+  font-family: "Inter", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.button-nav {
+  background-color: #FFF;
+  border: 1px #000 solid;
+  font-weight: bold;
+}
+
+.button-nav:hover {
+  background-color: #417B52;
+}
+
+.box {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 8rem;
+  border-radius: 2rem;
+}
 .box h1 {
-  background-image: url("../content/AdobeLeaf.png");
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #FFF;
   font-size: 8vw;
   font-family: "Inter", serif;
   font-weight: 700;
 }
 .box h4 {
   cursor: pointer;
+  font-size: 24px;
 }
 
-.button-login {
-  background-color: #FFF;
-  border: 1px #000 solid;
+.form-container ::placeholder {
+  color: #FFF;
 }
-
-.input-user {
-  background-color: #435C41;
+.form-container .checkBoxUserAuth:checked {
+  accent-color: #27A41D;
+}
+.form-container .input-user {
+  background-color: #417B52;
+  color: #FFF;
+}
+.form-container .button-user {
+  background-color: #417B52;
   color: #FFF;
 }
 
-form ::placeholder {
-  color: #FFF;
-}
-
-.button-user {
-  background-color: #435C41;
-  color: #FFF;
+.content-about {
+  background-image: url("../content/background-fino.png");
+  background-size: contain;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 2rem;
 }
 
 /*# sourceMappingURL=home.css.map */

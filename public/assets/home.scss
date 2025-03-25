@@ -1,49 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-$backGroundPaper: url("../content/AdobePaper.jpeg");
-$backGroundLeafs: url("../content/AdobeLeaf.png");
-$whiteColor: #FFF;
-$blackColor: #000;
-$darkGreenColor: #435C41;
-$fontFamillyInter: "Inter", serif;
+$backGroundPaper       : url("../content/AdobeLeaf.png");
+$backGroundLeafs       : url("../content/AdobeLeaf.png");
+$backgroundInfo        : url("../content/background-fino.png");
+$title-heading-color   : #FFF;
+$blackColor            : #000;
+$darkGreenColor        : #417B52;
+$mossGreen             : #27A41D;
+$fontFamillyInter      : "Inter", serif;
 $fontFamillyInterWeight: 700;
+
+// MEDIA QUERIES - START //
+
+@media (max-width: 950px) {
+    .box{
+        width: 60% !important;
+
+        .form-container {
+            width: 100% !important;
+        }
+    }
+}
+
+// MEDIA QUERIES - END //
+
+
+// BODY OF THE PAGE - START //
+
+.container-holder{
+    background-image: $backGroundLeafs;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 
 .holder-image{
-    background-image: $backGroundPaper;
-    height: 85vh;
+    padding: 5rem;
+}
+// BODY OF THE PAGE - END //
+
+
+// Navbar - START //
+
+    .navbar {
+        & .navbar-brand
+        {
+            margin: 0px;
+            font-family: $fontFamillyInter;
+            font-weight: $fontFamillyInterWeight;
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+
+
+
+.button-nav {
+    background-color: $title-heading-color;
+    border: 1px $blackColor solid;
+    font-weight: bold;
 }
 
+.button-nav:hover{
+    background-color: $darkGreenColor;
+}
+
+// Navbar - END //
+
 .box {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 8rem;
+    border-radius: 2rem;
     & h1 {
-        background-image: $backGroundLeafs;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color:$title-heading-color;
         font-size: 8vw;
         font-family: $fontFamillyInter;
         font-weight: $fontFamillyInterWeight;
     }
 
     & h4{
-        cursor: pointer
+        cursor: pointer;
+        font-size: 24px;
     }
 }
 
-.button-login {
-    background-color: $whiteColor;
-    border: 1px $blackColor solid;
+
+// Form - LOGIN/SIGNUP - START //
+
+.form-container{
+    & ::placeholder{
+        color: $title-heading-color;
+    }
+
+    .checkBoxUserAuth:checked{
+        accent-color: $mossGreen;
+    }
+
+
+    .input-user{
+        background-color: $darkGreenColor;
+        color: $title-heading-color;
+    }
+
+    .button-user {
+        background-color: $darkGreenColor;
+        color: $title-heading-color;
+    }
 }
 
-.input-user{
-    background-color: $darkGreenColor;
-    color: $whiteColor;
-}
+// Form - LOGIN/SIGNUP - END //
 
-form ::placeholder{
-    color: $whiteColor;
-}
 
-.button-user {
-    background-color: $darkGreenColor;
-    color: $whiteColor;
+// Home - Info of LumenLeaf - START //
+
+.content-about{
+    background-image: $backgroundInfo;
+    background-size: contain;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 2rem;
 }
