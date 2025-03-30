@@ -6,12 +6,13 @@ $(document).ready(function (){
         if (scrollHeight >= 200){
             $(".box").attr('class', 'box shadow opacity-50');
 
-            $(".content-about").attr('class', 'content-about d-flex justify-content-center p-5 shadow animated');
-
+            $(".content-about").css({"visibility": "visible"})
+            
             console.log('300 pixels reached');
         }else if (scrollHeight <= 200){
             $(".box").attr('class','box shadow');
-            
+
+            $(".content-about").css({"visibility": "collapse"})
             // Tentar utilizar opacidade inves de transition com height! (Note)
 
             console.log("Not 300 pixels");
