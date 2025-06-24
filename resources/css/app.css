@@ -1,0 +1,103 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #212922;
+}
+
+
+.width-25{
+    width: 5rem;
+}
+
+.height-75{
+    height: 90vh;
+}
+
+.ghostWhite{
+    background-color: #F8F8FF;
+}
+
+.lightGrey{
+    color: #CCCCCC;
+}
+
+.brunswickGreen{
+    background-color: #294936;
+}
+
+.blackOlive{
+    background-color: #212922;
+}
+
+.transparent{
+    background-color: transparent;
+}
+
+.titleColor{
+    color: #F8F8FF;
+}
+
+.subTextColor{
+    color: #CCCCCC;
+}
+
+.font-size-1{
+    font-size: 10px;
+}
+
+.font-size-2{
+    font-size: 14px;
+}
+
+.font-size-3{
+    font-size: 18px;
+}
+
+.sidebar-container{
+    width: 80px;
+    transition: all 0.5s;
+}
+
+.sidebar-container:hover{
+    width: 160px;
+}
+
+.dashboard-button{
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url('build/assets/images/dashboard-icon.png');
+}
+
+.tasks-button{
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url('build/assets/images/tasks-icon.png');
+}
+
+.settings-button{
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url('build/assets/images/settings-icon.png');
+}
+
+.dashboard-button:hover{
+    background-image: url('build/assets/images/dashboard-icon-hover.png');
+
+}
+
+.tasks-button:hover{
+    background-image: url('build/assets/images/tasks-icon-hover.png');
+}
+
+.settings-button:hover{
+    background-image: url('build/assets/images/settings-icon-hover.png');
+}
+

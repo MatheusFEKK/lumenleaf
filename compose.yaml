@@ -1,0 +1,20 @@
+services:
+    app:
+      build: .
+      ports: 
+        - '8080:80'
+      volumes:
+        - .:/var/www/html:z
+
+    db:
+      container_name: database
+      image: mysql
+      environment:
+        MYSQL_ROOT_PASSWORD: 10012019
+        MYSQL_DATABASE: lumenleaf_db
+        MYSQL_USER: root
+        MYSQL_PASSWORD: 10012019
+      volumes: 
+        - mysql_data:/var/lib/mysql_data
+volumes:
+  mysql_data:
