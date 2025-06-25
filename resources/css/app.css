@@ -9,12 +9,7 @@ body{
     background-color: #212922;
 }
 
-
-.width-25{
-    width: 5rem;
-}
-
-.height-75{
+.height-85{
     height: 90vh;
 }
 
@@ -60,16 +55,70 @@ body{
 
 .sidebar-container{
     width: 80px;
-    transition: all 0.5s;
+    transition: all 0.3s;
+
+    h4{
+        display: none;
+    }
+    
 }
 
 .sidebar-container:hover{
-    width: 160px;
+    width: 260px;
+
+    .tasks-button{
+        display: inline-block;
+        align-items: center;
+        width: 8vw;
+        transition: all 0.3s;
+    }
+
+    .dashboard-button{
+        display: inline-block;
+        align-items: center;
+        width: 10vw;
+        transition: all 0.3s;
+    }
+
+    .profile{
+        width: 10vw;
+        transition: all 3s;
+    }
+
+    .textHolder{
+        margin-left: 1rem;
+    }
+
+    h4 {
+        display: block;
+    }
+    
+}
+
+.taskCard{
+    width: 20vw;
+    height:8vh;
+}
+
+.taskSubmit{
+    width: 8vw;
+    height: 6vw;
+}
+
+.tasks-user{
+    width:25vw;
+    height:35vh;
+}
+
+.task-count{
+    width:2rem;
+    height:2rem;
 }
 
 .dashboard-button{
     width: 50px;
     height: 50px;
+    transition-delay: 3ms;
     background-repeat: no-repeat;
     background-image: url('build/assets/images/dashboard-icon.png');
 }
@@ -91,10 +140,16 @@ body{
 .dashboard-button:hover{
     background-image: url('build/assets/images/dashboard-icon-hover.png');
 
+    h4{
+        color: #212922;
+    }
 }
 
 .tasks-button:hover{
     background-image: url('build/assets/images/tasks-icon-hover.png');
+    h4{
+        color: #212922;
+    }
 }
 
 .settings-button:hover{
