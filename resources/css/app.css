@@ -95,19 +95,9 @@ body{
     
 }
 
-.taskCard{
-    width: 20vw;
-    height:8vh;
-}
-
 .taskSubmit{
     width: 8vw;
     height: 6vw;
-}
-
-.tasks-user{
-    width:25vw;
-    height:35vh;
 }
 
 .task-count{
