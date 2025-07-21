@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class BottomBar extends Component
+class TaskState extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class BottomBar extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.bottom-bar');
+        return view('components.task-state');
     }
 }

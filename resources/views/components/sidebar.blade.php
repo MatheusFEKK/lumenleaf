@@ -3,8 +3,8 @@
         <div class="profile d-flex flex-row">
             <img class="rounded-circle" src="{{asset('build/assets/images/person-icon.png')}}" width="60px" height="60px">
             <div class="textHolder d-flex flex-column">
-                <h4 class="titleColor font-size-2">Alice Madness</h4>
-                <h4 class="titleColor font-size-1">alicemadness@gmail.com</h4>
+                <h4 class="titleColor font-size-2">{{$username}}</h4>
+                <h4 class="titleColor font-size-1">{{$useremail}}</h4>
             </div>
         </div>
 

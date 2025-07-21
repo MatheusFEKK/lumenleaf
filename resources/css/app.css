@@ -69,19 +69,18 @@ body{
     .tasks-button{
         display: inline-block;
         align-items: center;
-        width: 8vw;
+        width: 150px;
         transition: all 0.3s;
     }
 
     .dashboard-button{
         display: inline-block;
         align-items: center;
-        width: 10vw;
+        width: 190px;
         transition: all 0.3s;
     }
 
     .profile{
-        width: 10vw;
         transition: all 3s;
     }
 
@@ -93,6 +92,18 @@ body{
         display: block;
     }
     
+}
+
+.height-none{
+    height: 0rem;
+}
+
+.height-box-task{
+    height:25rem
+}
+
+.width-box-task{
+    width: 20rem;
 }
 
 .taskSubmit{
@@ -144,5 +155,47 @@ body{
 
 .settings-button:hover{
     background-image: url('build/assets/images/settings-icon-hover.png');
+}
+
+.btn-closeWindow:hover{
+    background-color: #212922;
+    color: white;
+}
+
+.blurBackGround{
+    filter: blur(3px);
+}
+
+.disableInteration{
+    pointer-events: none;
+    user-select: none;
+}
+
+#noteDescription{
+    outline: none;
+}
+
+#titleNote:focus{
+    outline: none;
+}
+
+#titleNote{
+    font-size: 30px;
+}
+
+.container{
+    input:hover{
+        background-color: #294936;
+    }
+    input:focus-within{
+        background-color: #294936;
+    }
+
+    input::placeholder{
+        color: white;
+    }
+
+    
+    
 }
 
