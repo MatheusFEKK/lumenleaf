@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth')->group(function () {
     Route::get('/', [UserController::class, 'Home'])->name('home');
     Route::get('/tasks', [UserController::class, 'Tasks'])->name('tasks');
+    Route::post('/createTask', [UserController::class, 'CreateTask'])->name('createTask');
 });
 
 Route::middleware('guest')->group(function () {

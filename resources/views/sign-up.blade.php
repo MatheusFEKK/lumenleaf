@@ -35,7 +35,10 @@
             </div>
             @enderror
             
-            <button type="submit" class="btn brunswickGreen text-light fw-bold">SIGNUP</button>
+            <a href="{{route('login')}}" class="text-light align-self-end fw-bold">Already have an account?</a>
+             <div class="d-flex align-self-end">
+                 <button type="submit" class="btn brunswickGreen text-light fw-bold">SIGNUP</button>
+            </div>
         </form>
     </div>
 </div>

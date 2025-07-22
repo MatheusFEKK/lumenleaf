@@ -22,16 +22,27 @@
         </button>
 
         <div class="d-flex flex-column mt-5 ps-2">
-            <div class="d-flex flex-column gap-5">
-                <div class="d-flex flex-column">
-                    <label class="text-light" for="titleNote">Title Note...</label>
-                    <input class="brunswickGreen pt-3 border border-black border-top-0 border-start-0 border-end-0 text-light" type="text" id="titleNote" placeholder="What's in your mind?">
-                </div>
-                <textarea class="blackOlive border border-0 text-light" placeholder="Feel free to brainstorm..." name="noteDescription" id="noteDescription" cols="30" rows="10"></textarea>
-            </div>
-            <button class="blackOlive border border-0 p-2 rounded-2 position-absolute bottom-0 end-0 m-3">
-                <span class="font-size-2 text-light">Salvar</span>
-            </button>
+                <form class="d-flex flex-column gap-5" action="{{route('createTask')}}" method="POST">
+                    @csrf
+                        <div class="d-flex flex-column">
+                            @error('noteTitle')
+                                <div class="error-message text-light">
+                                    <span class="fw-bold">{{$message}}</span>
+                                </div>
+                            @enderror
+                            <label class="text-light" for="titleNote">Title Note...</label>
+                            <input class="brunswickGreen pt-3 border border-black border-top-0 border-start-0 border-end-0 text-light" type="text" name="noteTitle" id="titleNote" placeholder="What's in your mind?">
+                        </div>
+                         @error('noteDescription')
+                                <div class="error-message text-light">
+                                    <span class="fw-bold">{{$message}}</span>
+                                </div>
+                            @enderror
+                        <textarea class="blackOlive border border-0 text-light" placeholder="Feel free to brainstorm..." name="noteDescription" id="noteDescription" cols="30" rows="10"></textarea>
+                        <button type="submit" class="blackOlive border border-0 p-2 rounded-2 position-absolute bottom-0 end-0 m-3">
+                            <span class="font-size-2 text-light">Salvar</span>
+                        </button>
+                </form>
         </div>
     </div>
 

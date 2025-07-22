@@ -12,10 +12,9 @@ services:
       environment:
         MYSQL_ROOT_PASSWORD: 10012019
         MYSQL_DATABASE: lumenleaf_db
-        MYSQL_USER: root
         MYSQL_PASSWORD: 10012019
       ports:
-        ' "3306:3306'
+        -  "3306:3306"
       volumes: 
         - mysql_data:/var/lib/mysql_data
 volumes:
