@@ -20,10 +20,13 @@ class UserController extends Controller
 
     public function Tasks ()
     {
+        $notes = Notes::where('idUser', Auth::user()->idUser)->get();
+
         return view('tasks', [
             'title' => 'Your Tasks - LumenLeaf',
             'username' => Auth::user()->nameUser,
             'useremail' => Auth::user()->emailUser,
+            'tasksUser' => $notes,
         ]);
     }
 
