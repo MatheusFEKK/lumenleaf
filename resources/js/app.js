@@ -1,24 +1,31 @@
 import 'bootstrap';
 import '../css/app.css';
+import { main } from '@popperjs/core';
 
 window.toggleNoteCreator = toggleNoteCreator;
 
-function toggleNoteCreator()
+function toggleNoteCreator(mainContainer, childElement, interationAndBlur)
+
 {
-    let mainContainer      = document.getElementById('main-panel');
-    let noteCreatorElement = document.getElementById('creatorNote');
+    let firstElement  = document.getElementById(mainContainer);
+    let secondElement = document.getElementById(childElement);
+
+        if (!secondElement.classList.contains('active'))
+            {
+                if (interationAndBlur === true)
+                {
+                    firstElement.classList.add('disableInteration');
+                    firstElement.classList.add('blurBackGround');
+                }
+            secondElement.classList.add('active');
+            secondElement.classList.remove('d-none');
+        }else{
+            firstElement.classList.remove('disableInteration')
+            firstElement.classList.remove('blurBackGround')
+            secondElement.classList.remove('active');
+            secondElement.classList.add('d-none');
+        }
+
     
     
-    if (!noteCreatorElement.classList.contains('active'))
-        {
-        mainContainer.classList.add('disableInteration')
-        mainContainer.classList.add('blurBackGround')
-        noteCreatorElement.classList.add('active');
-        noteCreatorElement.classList.remove('d-none');
-    }else{
-        mainContainer.classList.remove('disableInteration')
-        mainContainer.classList.remove('blurBackGround')
-        noteCreatorElement.classList.remove('active');
-        noteCreatorElement.classList.add('d-none');
-    }
 }

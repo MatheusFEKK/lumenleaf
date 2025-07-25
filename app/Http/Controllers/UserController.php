@@ -54,9 +54,9 @@ class UserController extends Controller
 
         if (Notes::create($data))
         {
-            return redirect ('/');
+            return redirect ('/tasks');
         }else{
-            return redirect ('/')
+            return redirect ('/tasks')
                 ->withErrors($data);
         }
 

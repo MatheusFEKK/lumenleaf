@@ -9,15 +9,24 @@
         <h1 class="titleColor">Yours Tasks</h1>
         <h1 class="subTextColor font-size-3 ms-3">Organize, prioritize and complete</h1>
         
-        <div class="d-flex justify-content-center row m-2 m-lg-0">
-            @include('components.task-board')
+        <div class="d-flex flex-row gap-5">
+            <div class="d-flex justify-content-center row m-2 m-lg-0">
+                @include('components.task-board')
+                
+            </div>
+            <button class="btn w-25 h-25 mt-5" onclick="toggleNoteCreator('main-panel', 'creatorGroup', false)">
+                <span class="text-light font-size-2">+ New Group</span>
+                <div class="d-none flex-row" id="creatorGroup">
+                    <input class="border border-0" type="text">
+                </div>
+            </button>
         </div>
     </div>
 </div>
 
 
     <div class="d-none brunswickGreen position-absolute top-50 start-50 translate-middle w-75 h-75 rounded p-2" id="creatorNote">
-        <button class="btn btn-closeWindow float-end border-none" onclick="toggleNoteCreator()">
+        <button class="btn btn-closeWindow float-end border-none" onclick="toggleNoteCreator('main-panel', 'creatorNote', true)">
             <span>X</span>
         </button>
 

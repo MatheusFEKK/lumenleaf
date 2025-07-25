@@ -31,8 +31,8 @@
 
                 <div class="d-flex justify-content-center flex-column container-taks p-3 gap-3">
                         @include('components.card-task')
-                        @include('components.card-task')
                 </div>
+                
             </div>
     </div>
 </div>
