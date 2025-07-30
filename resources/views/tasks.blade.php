@@ -14,12 +14,14 @@
                 @include('components.task-board')
                 
             </div>
-            <button class="btn w-25 h-25 mt-5" onclick="toggleNoteCreator('main-panel', 'creatorGroup', false)">
-                <span class="text-light font-size-2">+ New Group</span>
-                <div class="d-none flex-row" id="creatorGroup">
-                    <input class="border border-0" type="text">
-                </div>
-            </button>
+            <div class="d-flex flex-row w-100 h-25 mt-5" id="elementHide">
+                <button id="elementHide" class="btn bg-transparent text-light border border-0 w-100" onclick="toggleNoteCreator('main-panel', 'creatorGroup', false)">+ New Group</button>
+                <form class="d-none flex-row" id="creatorGroup" method="POST">
+                    @csrf
+                    <input class="border border-0 brunswickGreen rounded" type="text" id="elementHide">
+                    <button class="btn brunswickGreen text-light" id="elementHide">Done</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

@@ -25,7 +25,15 @@ function toggleNoteCreator(mainContainer, childElement, interationAndBlur)
             secondElement.classList.remove('active');
             secondElement.classList.add('d-none');
         }
-
-    
-    
-}
+        
+        document.onclick = (element) => {
+            if (element.target.id != 'elementHide')
+            {
+                console.log("Closing " + element.target.id);
+                firstElement.classList.remove('disableInteration')
+                firstElement.classList.remove('blurBackGround')
+                secondElement.classList.remove('active');
+                secondElement.classList.add('d-none');
+            }
+        }
+    }
