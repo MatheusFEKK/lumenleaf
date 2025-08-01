@@ -10,22 +10,26 @@
         <h1 class="subTextColor font-size-3 ms-3">Organize, prioritize and complete</h1>
         
         <div class="d-flex flex-row gap-5">
-            <div class="d-flex justify-content-center row m-2 m-lg-0">
-                @include('components.task-board')
-                
-            </div>
-            <div class="d-flex flex-row w-100 h-25 mt-5" id="elementHide">
+            <div class="mt-5" id="elementHide">
                 <button id="elementHide" class="btn bg-transparent text-light border border-0 w-100" onclick="toggleNoteCreator('main-panel', 'creatorGroup', false)">+ New Group</button>
-                <form class="d-none flex-row" id="creatorGroup" method="POST">
+                <form class="d-none flex-row d-flex gap-3" action="{{route('createCategorie')}}" id="creatorGroup" method="POST">
                     @csrf
-                    <input class="border border-0 brunswickGreen rounded" type="text" id="elementHide">
-                    <button class="btn brunswickGreen text-light" id="elementHide">Done</button>
+                    <input class="border border-0 brunswickGreen rounded" type="text" name="newCategorieName" id="elementHide">
+                    <button type="submit" class="btn brunswickGreen text-light" id="elementHide">Done</button>
                 </form>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center row m-2 m-lg-0 gap-5 sm-flex-wrap">
+                @foreach ($categories as $categorie)
+                    <x-task-board  task-board-name='{{$categorie->nameNoteCategories}}' />
+                @endforeach
+               
+                
+                
             </div>
         </div>
     </div>
 </div>
-
 
     <div class="d-none brunswickGreen position-absolute top-50 start-50 translate-middle w-75 h-75 rounded p-2" id="creatorNote">
         <button class="btn btn-closeWindow float-end border-none" onclick="toggleNoteCreator('main-panel', 'creatorNote', true)">

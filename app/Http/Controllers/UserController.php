@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\userNote;
 use App\Models\Notes;
+use App\Models\NotesCategories;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,9 @@ class UserController extends Controller
             'username' => Auth::user()->nameUser,
             'useremail' => Auth::user()->emailUser,
             'tasksUser' => $notes,
+            'categories' => NotesCategories::all(),
         ]);
+
     }
 
     public function Signup()
@@ -61,5 +64,21 @@ class UserController extends Controller
         }
 
 
+    }
+
+    public function createCategorie(Request $request)
+    {
+        $data = [
+            'nameNoteCategories' => $request->newCategorieName,
+            'idUser' => Auth::user()->idUser,
+        ];
+
+        if (NotesCategories::create($data))
+        {
+            return redirect ('/tasks');
+        }else{
+            return redirect('/tasks')
+            ->withErrors($data);
+        }
     }
 }

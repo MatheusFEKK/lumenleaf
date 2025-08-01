@@ -2,17 +2,15 @@
     
     <div class="headerCard mt-2">
         <button class="blackOlive btn btn-closeWindow btn-sm border-none">
-            <span class="font-size-2 text-light opacity-50">To do</span>
+            <span class="font-size-2 text-light opacity-50">{{$taskBoardName}}</span>
         </button>
     
-        <button class="blackOlive btn btn-closeWindow btn-sm float-end border-none rounded" onclick="toggleNoteCreator('main-panel', 'creatorNote', true)">
+        <button class="blackOlive btn btn-closeWindow btn-sm float-end border-none rounded" onclick="toggleNoteCreator('main-panel', 'creatorNote', true)" id="elementHide">
 
             <span class="font-size-2 text-light opacity-50">+</span>
         </button>
         <div class="d-flex flex-column tasks-holder mt-2 gap-2">
-            @foreach ($tasksUser as $task)
-                    <x-card-task note-title='{{$task->noteTitle}}' />
-            @endforeach
+            
         </div>
     </div>
 

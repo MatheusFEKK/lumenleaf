@@ -10,6 +10,9 @@ create table _user(
 create table notes_categories(
     idNoteCategories INT AUTO_INCREMENT, 
     nameNoteCategories VARCHAR(10) NOT NULL,
+    idUser INT,
+    PRIMARY KEY (idNoteCategories),
+    CONSTRAINT idUser_notes_categories FOREIGN KEY (idUser) REFERENCES _user (idUser)
 )
 
 create table notes(
@@ -18,7 +21,7 @@ create table notes(
     noteDescription VARCHAR(255),
     noteWhenCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
     noteLastChange DATETIME DEFAULT CURRENT_TIMESTAMP,
-    idNoteCategories INT NOT NULL,
+    idNoteCategories INT DEFAULT 0 NOT NULL,
     idUser INT,
     PRIMARY KEY (idNote),
     CONSTRAINT idUser_notes FOREIGN KEY (idUser) REFERENCES _user (idUser),

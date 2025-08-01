@@ -20,20 +20,21 @@ function toggleNoteCreator(mainContainer, childElement, interationAndBlur)
             secondElement.classList.add('active');
             secondElement.classList.remove('d-none');
         }else{
+            
             firstElement.classList.remove('disableInteration')
             firstElement.classList.remove('blurBackGround')
             secondElement.classList.remove('active');
             secondElement.classList.add('d-none');
         }
-        
-        document.onclick = (element) => {
-            if (element.target.id != 'elementHide')
+        document.addEventListener('click', function (elementBeingClicked)
+        {
+            console.log("Clicked in that element " + elementBeingClicked.target);
+            if (elementBeingClicked.target == document.body)
             {
-                console.log("Closing " + element.target.id);
                 firstElement.classList.remove('disableInteration')
                 firstElement.classList.remove('blurBackGround')
                 secondElement.classList.remove('active');
                 secondElement.classList.add('d-none');
             }
-        }
+        });
     }
