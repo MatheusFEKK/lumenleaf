@@ -1,4 +1,4 @@
-<div class="d-lg-none d-xl-none d-xxl-none position-absolute bottom-0 start-50 translate-middle-x">
+<div class="d-lg-none d-xl-none d-xxl-none position-absolute start-50 translate-middle-x">
     <div class="container d-flex justify-content-center brunswickGreen min-vw-100">
         <div class="d-flex flex-row options p-3 gap-5">
             <div class="d-flex align-items-center flex-column">

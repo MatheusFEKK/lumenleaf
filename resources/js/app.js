@@ -4,21 +4,18 @@ import { main } from '@popperjs/core';
 
 window.toggleNoteCreator = toggleNoteCreator;
 
-function toggleNoteCreator(mainContainer, childElement, interationAndBlur)
+function toggleNoteCreator(mainContainer, childElement, idCategorie)
 
 {
     let firstElement  = document.getElementById(mainContainer);
     let secondElement = document.getElementById(childElement);
+    document.getElementById('idNoteCategories').value = idCategorie;
 
         if (!secondElement.classList.contains('active'))
             {
-                if (interationAndBlur === true)
-                {
-                    firstElement.classList.add('disableInteration');
-                    firstElement.classList.add('blurBackGround');
-                }
             secondElement.classList.add('active');
             secondElement.classList.remove('d-none');
+            secondElement.style.zIndex = 1;
         }else{
             
             firstElement.classList.remove('disableInteration')
@@ -28,13 +25,17 @@ function toggleNoteCreator(mainContainer, childElement, interationAndBlur)
         }
         document.addEventListener('click', function (elementBeingClicked)
         {
-            console.log("Clicked in that element " + elementBeingClicked.target);
-            if (elementBeingClicked.target == document.body)
-            {
-                firstElement.classList.remove('disableInteration')
-                firstElement.classList.remove('blurBackGround')
-                secondElement.classList.remove('active');
-                secondElement.classList.add('d-none');
-            }
+            let element = document.getElementById(elementBeingClicked.target.id);
+
+           for (let i = 0; i < element.children.length; i++)
+           {
+                console.log(element.children[i])
+                if (element.children[i].classList.contains('dashboard-view'))
+                {
+                    secondElement.classList.remove('active');
+                    secondElement.classList.add('d-none');
+                }
+           }
+            
         });
     }

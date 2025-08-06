@@ -13,6 +13,7 @@ class Notes extends Model
         'idUser',
         'noteTitle',
         'noteDescription',
+        'idNoteCategories',
     ];
 
     public $incrementing = true;

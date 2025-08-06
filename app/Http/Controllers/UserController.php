@@ -47,9 +47,10 @@ class UserController extends Controller
         ]);
     }
 
-    public function createTask(userNote $request)
+    public function CreateTask(userNote $request)
     {
         $data = [
+            'idNoteCategories' => $request->idNoteCategories,
             'noteTitle' => $request->noteTitle,
             'noteDescription' => $request->noteDescription,
             'idUser' => Auth::user()->idUser,
@@ -62,8 +63,6 @@ class UserController extends Controller
             return redirect ('/tasks')
                 ->withErrors($data);
         }
-
-
     }
 
     public function createCategorie(Request $request)
