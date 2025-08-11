@@ -9,7 +9,10 @@ function toggleNoteCreator(mainContainer, childElement, idCategorie)
 {
     let firstElement  = document.getElementById(mainContainer);
     let secondElement = document.getElementById(childElement);
-    document.getElementById('idNoteCategories').value = idCategorie;
+    if (idCategorie)
+    {
+        document.getElementById('idNoteCategories').value = idCategorie;
+    }
 
         if (!secondElement.classList.contains('active'))
             {
@@ -29,7 +32,7 @@ function toggleNoteCreator(mainContainer, childElement, idCategorie)
 
            for (let i = 0; i < element.children.length; i++)
            {
-                console.log(element.children[i])
+                console.log(element.children[i]);
                 if (element.children[i].classList.contains('dashboard-view'))
                 {
                     secondElement.classList.remove('active');
